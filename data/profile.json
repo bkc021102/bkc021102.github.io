@@ -1,0 +1,18 @@
+{
+  "profile": {
+    "name": "KRISHNA CHAITANYA BHUPATHI RAJU",
+    "title": "Data Analyst",
+    "bio": "Data Analyst with 3+ years of experience using SQL, Python, Power BI, Tableau, and advanced analytics across financial, operational, and healthcare data. Experienced in ETL/ELT, data quality, data governance, data modeling, data pipelines, KPI reporting, and stakeholder collaboration. Designed TIDE-HF, a clinical analytics system achieving 0.78–0.98 AUROC across 11 adverse-event classifiers using 546K+ MIMIC-IV admissions. Skilled in PySpark, Apache Spark, AWS, Databricks, statistical analysis, predictive modeling, and machine learning within Agile environments"
+  },
+  "contact": {
+    "email": "krishna.chaitanya007@outlook.com",
+    "phone": "+1 (716) 415-0795",
+    "githubUsername": "bkc021102",
+    "linkedin": "https://www.linkedin.com/in/bkrishna-chaitanya/"
+  },
+  "siteConfig": {
+    "domain": "",
+    "title": "KRISHNA CHAITANYA BHUPATHI RAJU - Portfolio",
+    "description": "Data Analyst with 3+ years of experience using SQL, Python, Power BI, Tableau, and advanced analytics across financial, operational, and healthcare data. Experienced in ETL/ELT, data quality, data governance, data modeling, data pipelines, KPI reporting, and stakeholder collaboration. Designed TIDE-HF, a clinical analytics system achieving 0.78–0.98 AUROC across 11 adverse-event classifiers using 546K+ MIMIC-IV admissions. Skilled in PySpark, Apache Spark, AWS, Databricks, statistical analysis, predictive modeling, and machine learning within Agile environments"
+  }
+}

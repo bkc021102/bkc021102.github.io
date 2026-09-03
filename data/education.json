@@ -1,0 +1,28 @@
+{
+  "_instructions": "Add your education and certifications here.",
+  "sectionTitle": "Education & Certifications",
+  "certificationsTitle": "Certifications",
+  "education": [
+    {
+      "degree": "Masters of Science in Data Science",
+      "school": "State University of New York at Buffalo",
+      "institution": "State University of New York at Buffalo",
+      "period": "Jan 2025 - May 2026",
+      "details": "",
+      "description": ""
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Databricks University Alliance Student",
+      "name": "Databricks University Alliance Student",
+      "issuer": "Databricks",
+      "date": "Dec 2025",
+      "icon": "fas fa-certificate",
+      "color": "#FFE66D",
+      "url": ""
+    }
+  ],
+  "awardsTitle": "Awards",
+  "awards": []
+}

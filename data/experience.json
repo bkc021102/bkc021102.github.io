@@ -1,0 +1,37 @@
+{
+  "_instructions": "Add your work experience here. Copy the experience object for each job.",
+  "sectionTitle": "Professional Experience",
+  "experiences": [
+    {
+      "title": "Data Analyst",
+      "company": "Bristol Myers Squibb, USA",
+      "period": "Jun 2026 – Present",
+      "location": "",
+      "description": "Analyzed 2M+ healthcare and business records from 15+ data sources using SQL, Python, Power BI, and Excel to build reports, track KPIs, and support operational and business analysis.\nDevelop and maintain 18+ Power BI dashboards and recurring reports covering KPIs, business metrics, operational performance, trends, and data quality indicators, translating complex datasets into actionable insights and stakeholder-ready visualizations.\nPartner with 20+ cross-functional stakeholders to gather requirements, define KPIs, validate business logic, and deliver scalable analytics and reporting solutions.\nPerform data profiling, cleansing, validation, reconciliation, and quality assurance across complex datasets; enforce data governance, data oversight, data controls, validation rules, standardization, and documentation.\nDevelop advanced SQL using joins, aggregations, CTEs, subqueries, window functions, views, and query optimization for data extraction, transformation, validation, and analysis, reducing analysis time by 30%.\nSupport ETL/ELT, data integration, data modeling, data pipelines, and data warehousing using SQL and Python; apply data governance, metric governance, data lineage, quality checks, and validation controls.\nAutomate data preparation, validation, reporting, and analytical workflows using SQL and Python, reducing manual reporting effort by 21%; perform EDA, statistical, trend, forecasting, root-cause, and performance analysis",
+      "responsibilities": [
+        "Analyzed 2M+ healthcare and business records from 15+ data sources using SQL, Python, Power BI, and Excel to build reports, track KPIs, and support operational and business analysis",
+        "Develop and maintain 18+ Power BI dashboards and recurring reports covering KPIs, business metrics, operational performance, trends, and data quality indicators, translating complex datasets into actionable insights and stakeholder-ready visualizations",
+        "Partner with 20+ cross-functional stakeholders to gather requirements, define KPIs, validate business logic, and deliver scalable analytics and reporting solutions",
+        "Perform data profiling, cleansing, validation, reconciliation, and quality assurance across complex datasets; enforce data governance, data oversight, data controls, validation rules, standardization, and documentation",
+        "Develop advanced SQL using joins, aggregations, CTEs, subqueries, window functions, views, and query optimization for data extraction, transformation, validation, and analysis, reducing analysis time by 30%",
+        "Support ETL/ELT, data integration, data modeling, data pipelines, and data warehousing using SQL and Python; apply data governance, metric governance, data lineage, quality checks, and validation controls",
+        "Automate data preparation, validation, reporting, and analytical workflows using SQL and Python, reducing manual reporting effort by 21%; perform EDA, statistical, trend, forecasting, root-cause, and performance analysis"
+      ]
+    },
+    {
+      "title": "Data Analyst",
+      "company": "Hexaware Technologies, India",
+      "period": "May 2022 – Dec 2024",
+      "location": "",
+      "description": "Analyzed and transformed 500K+ financial and operational records using SQL, Python, PySpark, and Apache Spark to support ETL workflows, reporting, ad hoc analysis, and downstream analytics.\nBuilt and optimized PySpark, Apache Kafka, SQL, and AWS data ingestion pipelines, improving data availability by approximately 29% for reporting and analytical use cases.\nPerformed data cleansing, validation, reconciliation, and exploratory data analysis (EDA) across large datasets, reducing recurring data-quality exceptions by 23% and improving analytical dataset reliability.\nDeveloped SQL queries and reporting workflows for data analysis, operational reporting, and root-cause investigation, reducing manual data investigation time by approximately 11%.\nProcessed large-scale datasets using PySpark, Delta Lake, SQL, and Python, applying data transformation and performance optimization techniques that reduced processing time by approximately 17%.\nDeveloped and optimized ETL and data integration workflows using Python, SQL, PySpark, and Apache Spark to transform, validate, and prepare reliable datasets for downstream reporting and analysis",
+      "responsibilities": [
+        "Analyzed and transformed 500K+ financial and operational records using SQL, Python, PySpark, and Apache Spark to support ETL workflows, reporting, ad hoc analysis, and downstream analytics",
+        "Built and optimized PySpark, Apache Kafka, SQL, and AWS data ingestion pipelines, improving data availability by approximately 29% for reporting and analytical use cases",
+        "Performed data cleansing, validation, reconciliation, and exploratory data analysis (EDA) across large datasets, reducing recurring data-quality exceptions by 23% and improving analytical dataset reliability",
+        "Developed SQL queries and reporting workflows for data analysis, operational reporting, and root-cause investigation, reducing manual data investigation time by approximately 11%",
+        "Processed large-scale datasets using PySpark, Delta Lake, SQL, and Python, applying data transformation and performance optimization techniques that reduced processing time by approximately 17%",
+        "Developed and optimized ETL and data integration workflows using Python, SQL, PySpark, and Apache Spark to transform, validate, and prepare reliable datasets for downstream reporting and analysis"
+      ]
+    }
+  ]
+}

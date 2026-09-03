@@ -1,0 +1,172 @@
+{
+  "_instructions": "Hero section content.",
+  "greeting": "Hi, I'm",
+  "name": "KRISHNA CHAITANYA BHUPATHI RAJU",
+  "title": "Data Analyst",
+  "summary": "Data Analyst with 3+ years of experience using SQL, Python, Power BI, Tableau, and advanced analytics across financial, operational, and healthcare data. Experienced in ETL/ELT, data quality, data governance, data modeling, data pipelines, KPI reporting, and stakeholder collaboration. Designed TIDE-HF, a clinical analytics system achieving 0.78–0.98 AUROC across 11 adverse-event classifiers using 546K+ MIMIC-IV admissions. Skilled in PySpark, Apache Spark, AWS, Databricks, statistical analysis, predictive modeling, and machine learning within Agile environments",
+  "avatarUrl": "/avatar.png",
+  "tagline": "Data Analyst",
+  "headline": {
+    "segments": [
+      {
+        "text": "Building ",
+        "em": false
+      },
+      {
+        "text": "data",
+        "em": true
+      },
+      {
+        "text": " where ",
+        "em": false
+      },
+      {
+        "text": "Python",
+        "em": true
+      },
+      {
+        "text": " meets ",
+        "em": false
+      },
+      {
+        "text": "Pandas",
+        "em": true
+      },
+      {
+        "text": " and ",
+        "em": false
+      },
+      {
+        "text": "Power BI",
+        "em": true
+      },
+      {
+        "text": ".",
+        "em": false
+      }
+    ]
+  },
+  "console": {
+    "title": "test-runner · regression · ci",
+    "status": "RUNNING",
+    "meta": [
+      {
+        "label": "suite",
+        "value": "portfolio-regression v1.0"
+      },
+      {
+        "label": "runtime",
+        "value": "4m 32s"
+      },
+      {
+        "label": "builds today",
+        "value": "24"
+      }
+    ],
+    "testLines": [
+      {
+        "name": "test_python",
+        "verdict": "PASS",
+        "duration": "42ms"
+      },
+      {
+        "name": "test_sql",
+        "verdict": "PASS",
+        "duration": "118ms"
+      },
+      {
+        "name": "test_advanced_sql",
+        "verdict": "PASS",
+        "duration": "7ms"
+      },
+      {
+        "name": "test_postgresql",
+        "verdict": "PASS",
+        "duration": "96ms"
+      },
+      {
+        "name": "test_pandas",
+        "verdict": "PASS",
+        "duration": "23ms"
+      },
+      {
+        "name": "test_unit_suite",
+        "verdict": "SKIP",
+        "duration": "64ms"
+      },
+      {
+        "name": "test_build_artifacts",
+        "verdict": "PASS",
+        "duration": "151ms"
+      },
+      {
+        "name": "test_release_smoke",
+        "verdict": "PASS",
+        "duration": "12ms"
+      }
+    ],
+    "footer": [
+      {
+        "label": "pass",
+        "value": "98.4%"
+      },
+      {
+        "label": "coverage",
+        "value": "90%"
+      },
+      {
+        "label": "flaky",
+        "value": "—"
+      }
+    ]
+  },
+  "highlights": [
+    {
+      "icon": "fas fa-briefcase",
+      "text": "3+ Years Experience",
+      "color": "#FF6B6B"
+    },
+    {
+      "icon": "fas fa-laptop-code",
+      "text": "Data Analyst",
+      "color": "#4ECDC4"
+    },
+    {
+      "icon": "fas fa-code",
+      "text": "Python / SQL / Advanced SQL",
+      "color": "#FFE66D"
+    }
+  ],
+  "cta": {
+    "buttons": [
+      {
+        "text": "Get In Touch",
+        "href": "#contact",
+        "type": "primary",
+        "external": false
+      },
+      {
+        "text": "View My Work",
+        "href": "#projects",
+        "type": "secondary",
+        "external": false
+      }
+    ]
+  },
+  "socialLinks": [
+    {
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/in/bkrishna-chaitanya/",
+      "icon": "fab fa-linkedin"
+    },
+    {
+      "platform": "Email",
+      "url": "mailto:krishna.chaitanya007@outlook.com",
+      "icon": "fas fa-envelope"
+    }
+  ],
+  "scrollIndicator": {
+    "text": "Scroll to explore",
+    "icon": "fas fa-chevron-down"
+  }
+}

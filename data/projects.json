@@ -1,0 +1,470 @@
+{
+  "_instructions": "Add your projects.",
+  "sectionTitle": "Featured Work",
+  "projects": [
+    {
+      "title": "TIDE-HF — Clinical AI Pipeline for Heart Failure Care Optimization",
+      "description": "Architected an end-to-end clinical AI pipeline using MIMIC-IV (546K+ admissions), automating ETL across 60+ ICD codes and 70+ lab analytes to build a 137K-visit analytical corpus, improving data quality, reproducibility, and data governance.\nEngineered 108 features and trained 11 multi-label LightGBM classifiers, achieving 0.78–0.98 AUROC across adverse-event predictions; deployed the solution using FastAPI, Streamlit, MCP, ChromaDB, and Mistral 7B-based RAG",
+      "longDescription": "Architected an end-to-end clinical AI pipeline using MIMIC-IV (546K+ admissions), automating ETL across 60+ ICD codes and 70+ lab analytes to build a 137K-visit analytical corpus, improving data quality, reproducibility, and data governance.\nEngineered 108 features and trained 11 multi-label LightGBM classifiers, achieving 0.78–0.98 AUROC across adverse-event predictions; deployed the solution using FastAPI, Streamlit, MCP, ChromaDB, and Mistral 7B-based RAG",
+      "category": "Backend Development",
+      "technologies": [
+        "MIMIC-IV",
+        "Python",
+        "ETL",
+        "LightGBM",
+        "FastAPI",
+        "Streamlit",
+        "MCP",
+        "ChromaDB",
+        "Mistral 7B",
+        "RAG"
+      ],
+      "icon": "fas fa-brain",
+      "color": "#FF6B6B",
+      "image": "",
+      "featured": true,
+      "github": "https://tide-hf.com/",
+      "demo": "https://tide-hf.com/",
+      "links": {
+        "github": "https://tide-hf.com/"
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "Flight Delay Prediction & Analytics System",
+      "description": "Engineered a PySpark ETL pipeline processing 500K+ records in Delta Lake, implementing data validation and optimization that achieved 4× faster analytical queries.\nDeveloped Spark MLlib prediction models using Logistic Regression, Random Forest, and Gradient Boosted Trees, applying feature engineering and cross-validation; built Power BI dashboards for stakeholder reporting and flight-delay insight",
+      "longDescription": "Engineered a PySpark ETL pipeline processing 500K+ records in Delta Lake, implementing data validation and optimization that achieved 4× faster analytical queries.\nDeveloped Spark MLlib prediction models using Logistic Regression, Random Forest, and Gradient Boosted Trees, applying feature engineering and cross-validation; built Power BI dashboards for stakeholder reporting and flight-delay insight",
+      "category": "Data Science",
+      "technologies": [
+        "PySpark",
+        "Delta Lake",
+        "Spark MLlib",
+        "Power BI"
+      ],
+      "icon": "fas fa-brain",
+      "color": "#4ECDC4",
+      "image": "",
+      "featured": true,
+      "github": "",
+      "demo": "",
+      "links": {
+        "github": ""
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "Urban Symphony: Unveiling the Hidden Narratives Behind NYC Construction Incidents",
+      "description": "Published article on Medium analyzing NYC construction incidents.",
+      "longDescription": "Published article on Medium analyzing NYC construction incidents.",
+      "category": "Development",
+      "technologies": [],
+      "icon": "fas fa-project-diagram",
+      "color": "#FFE66D",
+      "image": "",
+      "featured": true,
+      "github": "https://medium.com/@krishnachaitanyabhupathiraju0/urban-symphony-unveiling-the-hidden-narratives-behind-nyc-construction-incidents-0788c1deacbc",
+      "demo": "https://medium.com/@krishnachaitanyabhupathiraju0/urban-symphony-unveiling-the-hidden-narratives-behind-nyc-construction-incidents-0788c1deacbc",
+      "links": {
+        "github": "https://medium.com/@krishnachaitanyabhupathiraju0/urban-symphony-unveiling-the-hidden-narratives-behind-nyc-construction-incidents-0788c1deacbc"
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "The Sound Beneath the Sirens: What I Found Buried in America’s Crime Data",
+      "description": "Published article on Medium analyzing America's crime data.",
+      "longDescription": "Published article on Medium analyzing America's crime data.",
+      "category": "Development",
+      "technologies": [],
+      "icon": "fas fa-project-diagram",
+      "color": "#A8DADC",
+      "image": "",
+      "featured": true,
+      "github": "https://medium.com/@krishnachaitanyabhupathiraju0/the-sound-beneath-the-sirens-what-i-found-buried-in-americas-crime-data-6fbe7430ff0d",
+      "demo": "https://medium.com/@krishnachaitanyabhupathiraju0/the-sound-beneath-the-sirens-what-i-found-buried-in-americas-crime-data-6fbe7430ff0d",
+      "links": {
+        "github": "https://medium.com/@krishnachaitanyabhupathiraju0/the-sound-beneath-the-sirens-what-i-found-buried-in-americas-crime-data-6fbe7430ff0d"
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "online-grocery-retail---prediction-and-recommendation",
+      "description": "Full-featured application built as a learning exercise",
+      "longDescription": "Full-featured application built as a learning exercise",
+      "category": "Backend Development",
+      "technologies": [
+        "Jupyter Notebook",
+        "Python"
+      ],
+      "icon": "fas fa-project-diagram",
+      "color": "#B19CD9",
+      "image": "",
+      "featured": true,
+      "github": "https://github.com/bkc021102/online-grocery-retail---prediction-and-recommendation",
+      "demo": "https://github.com/bkc021102/online-grocery-retail---prediction-and-recommendation",
+      "links": {
+        "github": "https://github.com/bkc021102/online-grocery-retail---prediction-and-recommendation"
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "enhanced-anomaly-detection-system",
+      "description": "Comprehensive project exploring software design patterns",
+      "longDescription": "Comprehensive project exploring software design patterns",
+      "category": "Backend Development",
+      "technologies": [
+        "Python",
+        "Jupyter Notebook",
+        "HTML"
+      ],
+      "icon": "fas fa-brain",
+      "color": "#7FDBDA",
+      "image": "",
+      "featured": true,
+      "github": "https://github.com/bkc021102/enhanced-anomaly-detection-system",
+      "demo": "https://github.com/bkc021102/enhanced-anomaly-detection-system",
+      "links": {
+        "github": "https://github.com/bkc021102/enhanced-anomaly-detection-system"
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "customer-churn-prediction",
+      "description": "Personal development project using industry best practices",
+      "longDescription": "Personal development project using industry best practices",
+      "category": "Backend Development",
+      "technologies": [
+        "Python"
+      ],
+      "icon": "fas fa-project-diagram",
+      "color": "#FF6B6B",
+      "image": "",
+      "featured": false,
+      "github": "https://github.com/bkc021102/customer-churn-prediction",
+      "demo": "https://github.com/bkc021102/customer-churn-prediction",
+      "links": {
+        "github": "https://github.com/bkc021102/customer-churn-prediction"
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "sentiment-analysis-webapp-sagemaker",
+      "description": "Portfolio project showcasing development capabilities",
+      "longDescription": "Portfolio project showcasing development capabilities",
+      "category": "Backend Development",
+      "technologies": [
+        "Jupyter Notebook",
+        "Python",
+        "HTML"
+      ],
+      "icon": "fas fa-brain",
+      "color": "#4ECDC4",
+      "image": "",
+      "featured": false,
+      "github": "https://github.com/bkc021102/sentiment-analysis-webapp-sagemaker",
+      "demo": "https://github.com/bkc021102/sentiment-analysis-webapp-sagemaker",
+      "links": {
+        "github": "https://github.com/bkc021102/sentiment-analysis-webapp-sagemaker"
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "ds_salary_proj",
+      "description": "Full-featured application built as a learning exercise",
+      "longDescription": "Full-featured application built as a learning exercise",
+      "category": "Backend Development",
+      "technologies": [
+        "Jupyter Notebook",
+        "Python"
+      ],
+      "icon": "fas fa-project-diagram",
+      "color": "#FFE66D",
+      "image": "",
+      "featured": false,
+      "github": "https://github.com/bkc021102/ds_salary_proj",
+      "demo": "https://github.com/bkc021102/ds_salary_proj",
+      "links": {
+        "github": "https://github.com/bkc021102/ds_salary_proj"
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "retail-margin-cockpit",
+      "description": "Portfolio project showcasing development capabilities",
+      "longDescription": "Portfolio project showcasing development capabilities",
+      "category": "Backend Development",
+      "technologies": [
+        "Python",
+        "PLpgSQL",
+        "Dockerfile"
+      ],
+      "icon": "fas fa-project-diagram",
+      "color": "#A8DADC",
+      "image": "",
+      "featured": false,
+      "github": "https://github.com/bkc021102/retail-margin-cockpit",
+      "demo": "https://github.com/bkc021102/retail-margin-cockpit",
+      "links": {
+        "github": "https://github.com/bkc021102/retail-margin-cockpit"
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "online-payments-fraud-detection-with-machine-learning",
+      "description": "Interactive application built for continuous learning",
+      "longDescription": "Interactive application built for continuous learning",
+      "category": "Backend Development",
+      "technologies": [
+        "Python"
+      ],
+      "icon": "fas fa-project-diagram",
+      "color": "#B19CD9",
+      "image": "",
+      "featured": false,
+      "github": "https://github.com/bkc021102/online-payments-fraud-detection-with-machine-learning",
+      "demo": "https://github.com/bkc021102/online-payments-fraud-detection-with-machine-learning",
+      "links": {
+        "github": "https://github.com/bkc021102/online-payments-fraud-detection-with-machine-learning"
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "brain-mapping-eeg-classification",
+      "description": "Hands-on learning experience with modern frameworks",
+      "longDescription": "Hands-on learning experience with modern frameworks",
+      "category": "Backend Development",
+      "technologies": [
+        "Python",
+        "JavaScript",
+        "CSS",
+        "HTML",
+        "Shell",
+        "Dockerfile"
+      ],
+      "icon": "fas fa-brain",
+      "color": "#7FDBDA",
+      "image": "",
+      "featured": false,
+      "github": "https://github.com/bkc021102/brain-mapping-eeg-classification",
+      "demo": "https://github.com/bkc021102/brain-mapping-eeg-classification",
+      "links": {
+        "github": "https://github.com/bkc021102/brain-mapping-eeg-classification"
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "anomaly-detection",
+      "description": "Full-featured application built as a learning exercise",
+      "longDescription": "Full-featured application built as a learning exercise",
+      "category": "Backend Development",
+      "technologies": [
+        "Jupyter Notebook",
+        "Python"
+      ],
+      "icon": "fas fa-project-diagram",
+      "color": "#FF6B6B",
+      "image": "",
+      "featured": false,
+      "github": "https://github.com/bkc021102/anomaly-detection",
+      "demo": "https://github.com/bkc021102/anomaly-detection",
+      "links": {
+        "github": "https://github.com/bkc021102/anomaly-detection"
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "field-ops-sql-cost-audit",
+      "description": "Interactive application built for continuous learning",
+      "longDescription": "Interactive application built for continuous learning",
+      "category": "Backend Development",
+      "technologies": [
+        "Python",
+        "Dockerfile"
+      ],
+      "icon": "fas fa-project-diagram",
+      "color": "#4ECDC4",
+      "image": "",
+      "featured": false,
+      "github": "https://github.com/bkc021102/field-ops-sql-cost-audit",
+      "demo": "https://github.com/bkc021102/field-ops-sql-cost-audit",
+      "links": {
+        "github": "https://github.com/bkc021102/field-ops-sql-cost-audit"
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "spotify-lakehouse",
+      "description": "ncremental ETL pipeline: Spotify API → S3 → Glue → Snowflake → BI",
+      "longDescription": "ncremental ETL pipeline: Spotify API → S3 → Glue → Snowflake → BI",
+      "category": "Backend Development",
+      "technologies": [
+        "Python"
+      ],
+      "icon": "fas fa-project-diagram",
+      "color": "#FFE66D",
+      "image": "",
+      "featured": false,
+      "github": "https://github.com/bkc021102/spotify-lakehouse",
+      "demo": "https://github.com/bkc021102/spotify-lakehouse",
+      "links": {
+        "github": "https://github.com/bkc021102/spotify-lakehouse"
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "contribution-history",
+      "description": "Generated GitHub contribution history",
+      "longDescription": "Generated GitHub contribution history",
+      "category": "Development",
+      "technologies": [],
+      "icon": "fas fa-project-diagram",
+      "color": "#A8DADC",
+      "image": "",
+      "featured": false,
+      "github": "https://github.com/bkc021102/contribution-history",
+      "demo": "https://github.com/bkc021102/contribution-history",
+      "links": {
+        "github": "https://github.com/bkc021102/contribution-history"
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "enigma-data-forge",
+      "description": "GitHub repository: enigma-data-forge",
+      "longDescription": "GitHub repository: enigma-data-forge",
+      "category": "Data Science",
+      "technologies": [
+        "TypeScript",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "icon": "fas fa-brain",
+      "color": "#B19CD9",
+      "image": "",
+      "featured": false,
+      "github": "https://github.com/bkc021102/enigma-data-forge",
+      "demo": "https://github.com/bkc021102/enigma-data-forge",
+      "links": {
+        "github": "https://github.com/bkc021102/enigma-data-forge"
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "FLIGHT-DELAY-PREDICTION-USA",
+      "description": "GitHub repository: FLIGHT-DELAY-PREDICTION-USA",
+      "longDescription": "GitHub repository: FLIGHT-DELAY-PREDICTION-USA",
+      "category": "Backend Development",
+      "technologies": [
+        "Jupyter Notebook",
+        "Python"
+      ],
+      "icon": "fas fa-project-diagram",
+      "color": "#7FDBDA",
+      "image": "",
+      "featured": false,
+      "github": "https://github.com/bkc021102/FLIGHT-DELAY-PREDICTION-USA",
+      "demo": "https://github.com/bkc021102/FLIGHT-DELAY-PREDICTION-USA",
+      "links": {
+        "github": "https://github.com/bkc021102/FLIGHT-DELAY-PREDICTION-USA"
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "DIC-587-Assignment1-CVE-Lakehouse",
+      "description": "GitHub repository: DIC-587-Assignment1-CVE-Lakehouse",
+      "longDescription": "GitHub repository: DIC-587-Assignment1-CVE-Lakehouse",
+      "category": "Backend Development",
+      "technologies": [
+        "Jupyter Notebook",
+        "Python"
+      ],
+      "icon": "fas fa-project-diagram",
+      "color": "#FF6B6B",
+      "image": "",
+      "featured": false,
+      "github": "https://github.com/bkc021102/DIC-587-Assignment1-CVE-Lakehouse",
+      "demo": "https://github.com/bkc021102/DIC-587-Assignment1-CVE-Lakehouse",
+      "links": {
+        "github": "https://github.com/bkc021102/DIC-587-Assignment1-CVE-Lakehouse"
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "predicting-flight-delay",
+      "description": "GitHub repository: predicting-flight-delay",
+      "longDescription": "GitHub repository: predicting-flight-delay",
+      "category": "Development",
+      "technologies": [],
+      "icon": "fas fa-project-diagram",
+      "color": "#4ECDC4",
+      "image": "",
+      "featured": false,
+      "github": "https://github.com/bkc021102/predicting-flight-delay",
+      "demo": "https://github.com/bkc021102/predicting-flight-delay",
+      "links": {
+        "github": "https://github.com/bkc021102/predicting-flight-delay"
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    }
+  ]
+}

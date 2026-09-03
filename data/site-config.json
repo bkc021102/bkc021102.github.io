@@ -1,0 +1,26 @@
+{
+  "_instructions": "Site-wide configuration and meta tags.",
+  "title": "KRISHNA CHAITANYA BHUPATHI RAJU | Data Analyst",
+  "description": "Data Analyst with 3+ years of experience using SQL, Python, Power BI, Tableau, and advanced analytics across financial, operational, and healthcare data. Experienced in ETL/ELT, data quality, data ...",
+  "keywords": "Data Analyst, Portfolio, KRISHNA CHAITANYA BHUPATHI RAJU, Python, SQL, Advanced SQL, PostgreSQL, Pandas, NumPy, Scikit-learn, PySpark",
+  "author": "KRISHNA CHAITANYA BHUPATHI RAJU",
+  "siteName": "KRISHNA CHAITANYA BHUPATHI RAJU",
+  "siteTitle": "KRISHNA CHAITANYA BHUPATHI RAJU | Data Analyst",
+  "meta": {
+    "title": "KRISHNA CHAITANYA BHUPATHI RAJU | Data Analyst",
+    "description": "Data Analyst with 3+ years of experience using SQL, Python, Power BI, Tableau, and advanced analytics across financial, operational, and healthcare data. Experienced in ETL/ELT, data quality, data ...",
+    "author": "KRISHNA CHAITANYA BHUPATHI RAJU",
+    "keywords": "Data Analyst, Portfolio, KRISHNA CHAITANYA BHUPATHI RAJU, Python, SQL, Advanced SQL, PostgreSQL, Pandas, NumPy, Scikit-learn, PySpark"
+  },
+  "branding": {
+    "name": "KRISHNA CHAITANYA BHUPATHI RAJU",
+    "tagline": "Data Analyst",
+    "logo": "/logo.png"
+  },
+  "settings": {
+    "year": 2026,
+    "enableAnimations": true,
+    "enableParticles": true,
+    "navbarScrollEffect": true
+  }
+}
