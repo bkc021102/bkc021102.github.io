@@ -1,141 +1,193 @@
 {
-  "_instructions": "Organize your skills with vibrant colors.",
-  "sectionTitle": "Skills & Technologies",
+  "_instructions": "Each group has a short note, 3-6 headline skills in 'core' (rendered large), and supporting skills in 'skills' (rendered as small chips). Keep groups between 6 and 22 total entries.",
+  "sectionTitle": "Technical stack",
   "categories": [
     {
-      "category": "Programming Languages",
+      "category": "Languages & Analysis",
+      "note": "Day-to-day querying, wrangling and statistical work",
       "icon": "fas fa-code",
       "color": "#FF6B6B",
-      "skills": [
+      "core": [
         "Python",
         "SQL",
         "Advanced SQL",
-        "PostgreSQL"
-      ]
-    },
-    {
-      "category": "Frameworks & Libraries",
-      "icon": "fas fa-toolbox",
-      "color": "#4ECDC4",
-      "skills": [
+        "PostgreSQL",
         "Pandas",
-        "NumPy",
-        "Scikit-learn",
-        "PySpark",
-        "Apache Spark",
-        "Apache Kafka",
-        "Delta Lake",
-        "dbt",
-        "LightGBM",
-        "OpenAI API",
-        "MCP",
-        "ChromaDB",
-        "Mistral 7B",
-        "FastAPI",
-        "Streamlit",
-        "Spark MLlib"
+        "NumPy"
+      ],
+      "skills": [
+        "Data Analysis",
+        "Exploratory Data Analysis (EDA)",
+        "Statistical Analysis",
+        "Ad Hoc Analysis",
+        "Trend Analysis",
+        "Root Cause Analysis",
+        "Predictive Analytics",
+        "Data Interpretation",
+        "Insight Generation"
       ]
     },
     {
-      "category": "Tools & Platforms",
-      "icon": "fas fa-wrench",
+      "category": "BI, Reporting & Visualization",
+      "note": "Dashboards and metrics business teams actually use",
+      "icon": "fas fa-chart-column",
       "color": "#FFE66D",
-      "skills": [
+      "core": [
         "Power BI",
         "Tableau",
         "Excel",
         "Power Query",
-        "PivotTables",
-        "Power Pivot",
-        "XLOOKUP/VLOOKUP",
-        "AWS",
-        "Amazon S3",
-        "Amazon EC2",
-        "AWS Lambda",
-        "Databricks",
-        "Docker",
-        "Git",
-        "GitHub"
-      ]
-    },
-    {
-      "category": "Technical Skills",
-      "icon": "fas fa-laptop-code",
-      "color": "#A8DADC",
+        "Power Pivot"
+      ],
       "skills": [
-        "Data Analysis",
-        "Exploratory Data Analysis (EDA)",
-        "Ad Hoc Analysis",
-        "Statistical Analysis",
-        "Trend Analysis",
-        "Root Cause Analysis",
-        "KPI Development & Analysis",
-        "Business Metrics",
-        "Predictive Analytics",
-        "Data Interpretation",
-        "Insight Generation",
-        "Requirements Gathering",
-        "Stakeholder Collaboration",
-        "Data-Driven Decision Making",
-        "Data Quality",
-        "Data Governance",
-        "Data Oversight",
-        "Data Profiling",
-        "Data Validation",
-        "Data Reconciliation",
-        "Data Integrity",
-        "Data Consistency",
-        "Data Standardization",
-        "Data Lineage",
-        "Data Auditing",
-        "Quality Assurance",
-        "Validation Rules",
-        "Data Controls",
-        "Metric Governance",
-        "Documentation",
-        "Troubleshooting",
+        "PivotTables",
+        "XLOOKUP/VLOOKUP",
         "Dashboard Development",
         "Dashboard Design",
         "Data Visualization",
         "Data Storytelling",
         "Reporting",
         "Business Intelligence",
-        "Data Modeling",
+        "KPI Development & Analysis",
+        "Business Metrics",
+        "Metric Governance",
+        "Data-Driven Decision Making"
+      ]
+    },
+    {
+      "category": "Data Engineering & Warehousing",
+      "note": "Pipelines and models that move data at scale",
+      "icon": "fas fa-database",
+      "color": "#4ECDC4",
+      "core": [
+        "PySpark",
+        "Apache Spark",
+        "Apache Kafka",
+        "Delta Lake",
+        "dbt",
+        "Databricks"
+      ],
+      "skills": [
         "ETL",
         "ELT",
         "Data Pipelines",
         "Data Integration",
-        "Data Deduplication",
+        "Data Modeling",
         "Data Warehousing",
         "Dimensional Modeling",
         "Star Schema",
         "Fact Tables",
         "Dimension Tables",
         "OLTP",
+        "Data Deduplication"
+      ]
+    },
+    {
+      "category": "Machine Learning & Modelling",
+      "note": "Supervised models from features to tuned predictions",
+      "icon": "fas fa-brain",
+      "color": "#8E7DFF",
+      "core": [
+        "Scikit-learn",
+        "LightGBM",
+        "XGBoost",
+        "Spark MLlib",
+        "Random Forest",
+        "Logistic Regression"
+      ],
+      "skills": [
         "Machine Learning",
         "Predictive Modeling",
         "Feature Engineering",
         "Classification",
         "Cross-Validation",
         "Hyperparameter Tuning",
-        "Logistic Regression",
-        "Random Forest",
-        "Gradient Boosting",
-        "XGBoost",
-        "Healthcare Data Analytics",
-        "Clinical Data Analysis",
-        "Clinical Datasets",
-        "Healthcare Data Pipelines",
-        "Clinical Feature Engineering",
-        "Healthcare Data Quality",
-        "Healthcare Data Validation",
-        "Adverse-Event Prediction",
-        "MIMIC-IV",
+        "Gradient Boosting"
+      ]
+    },
+    {
+      "category": "LLM & Generative AI",
+      "note": "Retrieval-backed assistants and LLM-powered tooling",
+      "icon": "fas fa-robot",
+      "color": "#F49AC2",
+      "core": [
+        "OpenAI API",
+        "Retrieval-Augmented Generation (RAG)",
+        "ChromaDB",
+        "Mistral 7B",
+        "MCP"
+      ],
+      "skills": [
         "Large Language Models (LLMs)",
         "Generative AI",
         "LLM Agents",
-        "Retrieval-Augmented Generation (RAG)",
-        "Prompt Engineering"
+        "Prompt Engineering",
+        "FastAPI",
+        "Streamlit"
+      ]
+    },
+    {
+      "category": "Data Quality & Governance",
+      "note": "Controls that keep numbers trustworthy and auditable",
+      "icon": "fas fa-shield-halved",
+      "color": "#A8DADC",
+      "core": [
+        "Data Quality",
+        "Data Governance",
+        "Data Profiling",
+        "Data Validation",
+        "Data Reconciliation",
+        "Data Lineage"
+      ],
+      "skills": [
+        "Data Integrity",
+        "Data Consistency",
+        "Data Standardization",
+        "Data Auditing",
+        "Quality Assurance",
+        "Validation Rules",
+        "Data Controls",
+        "Data Oversight"
+      ]
+    },
+    {
+      "category": "Healthcare & Clinical Analytics",
+      "note": "Clinical data domain work, including MIMIC-IV research",
+      "icon": "fas fa-heart-pulse",
+      "color": "#EF767A",
+      "core": [
+        "MIMIC-IV",
+        "Clinical Data Analysis",
+        "Healthcare Data Analytics",
+        "Adverse-Event Prediction",
+        "Clinical Feature Engineering"
+      ],
+      "skills": [
+        "Clinical Datasets",
+        "Healthcare Data Pipelines",
+        "Healthcare Data Quality",
+        "Healthcare Data Validation"
+      ]
+    },
+    {
+      "category": "Cloud, Delivery & Collaboration",
+      "note": "Where the work is deployed and shipped with others",
+      "icon": "fas fa-cloud",
+      "color": "#6BAED6",
+      "core": [
+        "AWS",
+        "Amazon S3",
+        "Amazon EC2",
+        "AWS Lambda",
+        "Docker",
+        "Git"
+      ],
+      "skills": [
+        "GitHub",
+        "Requirements Gathering",
+        "Stakeholder Collaboration",
+        "Documentation",
+        "Troubleshooting"
       ]
     }
   ]

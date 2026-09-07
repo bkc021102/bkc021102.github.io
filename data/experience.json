@@ -16,7 +16,8 @@
         "Develop advanced SQL using joins, aggregations, CTEs, subqueries, window functions, views, and query optimization for data extraction, transformation, validation, and analysis, reducing analysis time by 30%",
         "Support ETL/ELT, data integration, data modeling, data pipelines, and data warehousing using SQL and Python; apply data governance, metric governance, data lineage, quality checks, and validation controls",
         "Automate data preparation, validation, reporting, and analytical workflows using SQL and Python, reducing manual reporting effort by 21%; perform EDA, statistical, trend, forecasting, root-cause, and performance analysis"
-      ]
+      ],
+      "logo": "assets/images/logos/bristol-myers-squibb-light.svg"
     },
     {
       "title": "Data Analyst",
@@ -31,7 +32,8 @@
         "Developed SQL queries and reporting workflows for data analysis, operational reporting, and root-cause investigation, reducing manual data investigation time by approximately 11%",
         "Processed large-scale datasets using PySpark, Delta Lake, SQL, and Python, applying data transformation and performance optimization techniques that reduced processing time by approximately 17%",
         "Developed and optimized ETL and data integration workflows using Python, SQL, PySpark, and Apache Spark to transform, validate, and prepare reliable datasets for downstream reporting and analysis"
-      ]
+      ],
+      "logo": "assets/images/logos/hexaware-light.svg"
     }
   ]
 }

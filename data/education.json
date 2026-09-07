@@ -9,7 +9,8 @@
       "institution": "State University of New York at Buffalo",
       "period": "Jan 2025 - May 2026",
       "details": "",
-      "description": ""
+      "description": "",
+      "logo": "assets/images/logos/suny-buffalo-light.svg"
     }
   ],
   "certifications": [
@@ -20,7 +21,8 @@
       "date": "Dec 2025",
       "icon": "fas fa-certificate",
       "color": "#FFE66D",
-      "url": ""
+      "url": "",
+      "logo": "assets/images/logos/databricks-light.svg"
     }
   ],
   "awardsTitle": "Awards",

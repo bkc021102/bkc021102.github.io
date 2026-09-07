@@ -57,6 +57,18 @@
 
     const firstName = (name) => (isStr(name) ? name.trim().split(/\s+/)[0] : '');
 
+    // Brand mark for a company / school / issuer. Returns '' when there is no
+    // logo. If the asset 404s the img deletes itself — or swaps in `fallback`
+    // text when one is given — so nothing renders a broken-image glyph.
+    const logoImg = (src, label, extraClass, fallback) => {
+        if (!isStr(src)) return '';
+        const cls = 'role__logo' + (isStr(extraClass) ? ' ' + extraClass : '');
+        const fb = isStr(fallback)
+            ? ` data-fb="${esc(fallback)}" onerror="this.replaceWith(this.dataset.fb||'')"`
+            : ' onerror="this.remove()"';
+        return `<img class="${cls}" src="${esc(src)}" alt="${esc(label)} logo" loading="lazy" decoding="async"${fb}>`;
+    };
+
     // "A, B and C" style joining
     const joinNatural = (items) => {
         const list = items.filter(isStr);
@@ -286,8 +298,10 @@
                 facts.push(['Education', esc(edu0.degree) + (isStr(school) ? ` · ${esc(school)}` : '')]);
             }
             const cat0 = arr(d.skills && d.skills.categories)[0];
-            if (cat0 && arr(cat0.skills).length) {
-                facts.push(['Specialties', arr(cat0.skills).slice(0, 4).map(esc).join(' · ')]);
+            if (cat0) {
+                const spec = (arr(cat0.core).filter(isStr).length ? arr(cat0.core) : arr(cat0.skills))
+                    .filter(isStr).slice(0, 4);
+                if (spec.length) facts.push(['Specialties', spec.map(esc).join(' · ')]);
             }
             facts.push(['Open to', isStr(title) ? `${esc(title)} roles` : 'New opportunities']);
             if (isStr(email)) {
@@ -298,19 +312,6 @@
                 dl.innerHTML = facts
                     .map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${v}</dd></div>`)
                     .join('');
-            }
-
-            // Portrait image, caption and alt. Leaving the shipped image in
-            // place put the demo model's face on every customer's site.
-            const cap = $('.about__portrait figcaption .v');
-            if (cap && isStr(name)) {
-                cap.textContent = [name, location, title].filter(isStr).join(' · ');
-            }
-            const img = $('.about__portrait img');
-            if (img) {
-                const avatar = about.image || (d.hero && d.hero.avatarUrl);
-                if (isStr(avatar)) img.setAttribute('src', avatar);
-                if (isStr(name)) img.setAttribute('alt', `${name} — portrait`);
             }
         });
 
@@ -350,6 +351,8 @@
                     ? `<ul class="chips">${tech.map(t => `<li>${esc(t)}</li>`).join('')}</ul>`
                     : '';
 
+                const brandLogo = logoImg(j.logo, j.company || '');
+
                 return [
                     '<article class="role">',
                     '  <aside class="role__meta">',
@@ -359,7 +362,7 @@
                     '  </aside>',
                     '  <div class="role__body">',
                     '    <header class="role__head">',
-                    `      <h3 class="role__company">${esc(j.company || '')}</h3>`,
+                    `      <div class="role__brand">${brandLogo}<h3 class="role__company">${esc(j.company || '')}</h3></div>`,
                     `      <p class="role__title">${esc(j.title || '')}</p>`,
                     lede ? `      <p class="role__lede">${esc(lede)}</p>` : '',
                     '    </header>',
@@ -403,6 +406,16 @@
                 if (isStr(gh)) rail.push(`<a class="award__link" href="${esc(gh)}"${extAttrs(gh)}>View on GitHub →</a>`);
                 const railHtml = rail.length ? `<div class="project__metrics">${rail.join('')}</div>` : '';
 
+                // Artwork sits above the metrics in the column-3 aside. If the
+                // file is missing the figure removes itself, leaving the card
+                // looking intentional rather than broken.
+                const thumbHtml = isStr(p.image)
+                    ? `<figure class="project__thumb"><img src="${esc(p.image)}" alt="${esc(p.title)} — project artwork" loading="lazy" decoding="async" width="1536" height="1024" onerror="this.closest('.project__thumb').remove()"></figure>`
+                    : '';
+                const asideHtml = (thumbHtml || railHtml)
+                    ? `<div class="project__aside">${thumbHtml}${railHtml}</div>`
+                    : '';
+
                 const chips = tech.length
                     ? `<ul class="chips chips--sm">${tech.map(t => `<li>${esc(t)}</li>`).join('')}</ul>`
                     : '';
@@ -410,29 +423,60 @@
                 return [
                     '<article class="project">',
                     `  <div class="project__index">${idx}</div>`,
-                    metaHtml ? `  ${metaHtml}` : '',
-                    `  <h3 class="project__title">${esc(p.title)}</h3>`,
-                    isStr(p.description) ? `  <p class="project__desc">${esc(p.description)}</p>` : '',
-                    railHtml ? `  ${railHtml}` : '',
-                    chips ? `  ${chips}` : '',
+                    '  <div class="project__main">',
+                    metaHtml ? `    ${metaHtml}` : '',
+                    `    <h3 class="project__title">${esc(p.title)}</h3>`,
+                    isStr(p.description) ? `    <p class="project__desc">${esc(p.description)}</p>` : '',
+                    chips ? `    ${chips}` : '',
+                    '  </div>',
+                    asideHtml ? `  ${asideHtml}` : '',
                     '</article>'
                 ].filter(Boolean).join('\n');
             }).join('\n');
         });
 
         // ---- Stack / Skills
+        // Schema: categories[] of { category, note?, core[]?, skills[]? }.
+        // Defensive: `core` may be absent (older payloads) — then the leading
+        // entries of `skills` are promoted so every group still has a headline.
         safe('stack', () => {
-            const cats = arr(d.skills && d.skills.categories)
-                .filter(c => c && isStr(c.category) && arr(c.skills).length);
+            const cats = arr(d.skills && d.skills.categories).filter(c =>
+                c && isStr(c.category) &&
+                (arr(c.core).filter(isStr).length || arr(c.skills).filter(isStr).length));
             if (!cats.length) { hide('#stack'); return; }
             const wrap = $('#stack .stack');
             if (!wrap) return;
-            wrap.innerHTML = cats.map(c => [
-                '<div class="stack__col">',
-                `  <h4>${esc(c.category)}</h4>`,
-                `  <ul class="stack__list">${arr(c.skills).filter(isStr).map(s => `<li>${esc(s)}</li>`).join('')}</ul>`,
-                '</div>'
-            ].join('\n')).join('\n');
+
+            const pad2 = (n) => (n < 10 ? '0' + n : String(n));
+
+            wrap.innerHTML = cats.map((c, i) => {
+                const all = arr(c.skills).filter(isStr);
+                let core = arr(c.core).filter(isStr);
+                let rest;
+                if (core.length) {
+                    const seen = core.map(s => s.toLowerCase());
+                    rest = all.filter(s => seen.indexOf(s.toLowerCase()) === -1);
+                } else {
+                    core = all.slice(0, Math.min(5, all.length));
+                    rest = all.slice(core.length);
+                }
+                const li = (list) => list.map(s => `<li>${esc(s)}</li>`).join('');
+                // `stack__col` is kept purely so main.js's reveal observer,
+                // which targets that selector, still animates each group in.
+                return [
+                    '<div class="stack__group stack__col">',
+                    '  <div class="stack__rail">',
+                    `    <span class="stack__index">S/${pad2(i + 1)}</span>`,
+                    `    <h4 class="stack__label">${esc(c.category)}</h4>`,
+                    isStr(c.note) ? `    <p class="stack__note">${esc(c.note)}</p>` : '',
+                    '  </div>',
+                    '  <div class="stack__body">',
+                    core.length ? `    <ul class="stack__core">${li(core)}</ul>` : '',
+                    rest.length ? `    <ul class="chips chips--sm">${li(rest)}</ul>` : '',
+                    '  </div>',
+                    '</div>'
+                ].filter(Boolean).join('\n');
+            }).join('\n');
         });
 
         // ---- Credentials (education + certifications + awards)
@@ -450,10 +494,12 @@
                     const school = [e.school || e.institution, e.location].filter(isStr).join(' · ');
                     const years = String(e.period || '').replace(/\s*-\s*/, ' — ');
                     const note = e.details || e.description;
+                    const eduLogo = logoImg(e.logo, e.school || e.institution || e.degree, 'role__logo--sm edu__logo');
                     return [
                         '<article class="edu">',
                         `  <div class="edu__years">${esc(years)}</div>`,
                         '  <div class="edu__body">',
+                        eduLogo ? `    ${eduLogo}` : '',
                         `    <h5>${esc(e.degree)}</h5>`,
                         isStr(school) ? `    <p>${esc(school)}</p>` : '',
                         isStr(note) ? `    <p class="edu__note">${esc(note)}</p>` : '',
@@ -471,9 +517,14 @@
                     const abbr = issuer.split(/\s+/).map(w => w[0]).join('').toUpperCase();
                     return abbr.length >= 2 ? abbr : issuer;
                 };
-                const items = certList.map(c =>
-                    `<li><span class="cert__issuer">${esc(shortIssuer(c.issuer))}</span><span class="cert__name">${esc(c.title || c.name)}${isStr(c.date) ? ` · ${esc(c.date)}` : ''}</span></li>`
-                ).join('');
+                const items = certList.map(c => {
+                    // The logo stands in for the issuer abbreviation when present,
+                    // and falls back to it if the file is missing.
+                    const abbr = shortIssuer(c.issuer);
+                    const certLogo = logoImg(c.logo, c.issuer || c.title || c.name, 'role__logo--sm', abbr);
+                    const issuer = certLogo || esc(abbr);
+                    return `<li><span class="cert__issuer">${issuer}</span><span class="cert__name">${esc(c.title || c.name)}${isStr(c.date) ? ` · ${esc(c.date)}` : ''}</span></li>`;
+                }).join('');
                 const label = ed.certificationsTitle || 'Certifications';
                 blocks.push(`<div class="creds__block"><h4 class="creds__label">${esc(label)}</h4><ul class="cert-list">${items}</ul></div>`);
             }

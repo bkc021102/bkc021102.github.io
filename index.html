@@ -158,28 +158,24 @@
     <!-- ABOUT -->
     <section id="about" class="section section--about">
         <div class="wrap about">
-            <figure class="about__portrait">
-                <div class="about__frame">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27512%27 height=%27512%27/%3E" alt="" data-portrait width="1024" height="1024" loading="lazy" />
-                </div>
-                <figcaption>
-                    <span class="k">Fig.&nbsp;01</span>
-                    <span class="v"></span>
-                </figcaption>
-            </figure>
+            <aside class="about__rail">
+                <span class="section__num">— 00</span>
+            </aside>
 
             <div class="about__body">
-                <span class="section__num">— 00</span>
                 <h2 class="about__title">Hello — I'm <em>Elena</em>.</h2>
-                <p class="about__lede">
-                    I deliver validated, production-grade software in semiconductor and systems engineering environments. My day job is at Halcyon Semiconductors — automating validation, root-causing Linux-layer defects, and hardening hardware-software integration.
-                </p>
-                <p class="about__para">
-                    I hold a Master's in Computer Science from Lamar University (4.0 GPA, Outstanding Graduate Student Award) and a B.Tech in Electronics &amp; Communication. That combination lets me bridge firmware-level hardware understanding with full-stack system software skills.
-                </p>
-                <p class="about__para">
-                    I care about defect-escape rates, reproducible failures, and validation that actually catches regressions. Passing once is a prerequisite; passing reliably is the work.
-                </p>
+
+                <div class="about__prose">
+                    <p class="about__lede">
+                        I deliver validated, production-grade software in semiconductor and systems engineering environments. My day job is at Halcyon Semiconductors — automating validation, root-causing Linux-layer defects, and hardening hardware-software integration.
+                    </p>
+                    <p class="about__para">
+                        I hold a Master's in Computer Science from Lamar University (4.0 GPA, Outstanding Graduate Student Award) and a B.Tech in Electronics &amp; Communication. That combination lets me bridge firmware-level hardware understanding with full-stack system software skills.
+                    </p>
+                    <p class="about__para">
+                        I care about defect-escape rates, reproducible failures, and validation that actually catches regressions. Passing once is a prerequisite; passing reliably is the work.
+                    </p>
+                </div>
 
                 <dl class="about__facts">
                     <div><dt>Role</dt><dd>Embedded Software Developer · Halcyon Semiconductors</dd></div>
@@ -344,41 +340,61 @@
             </header>
 
             <div class="stack">
-                <div class="stack__col">
-                    <h4>Languages</h4>
-                    <ul class="stack__list">
-                        <li>C</li><li>C++</li><li>Embedded&nbsp;C</li><li>Python</li><li>Bash</li><li>SQL</li>
-                    </ul>
+                <div class="stack__group stack__col">
+                    <div class="stack__rail">
+                        <span class="stack__index">S/01</span>
+                        <h4 class="stack__label">Languages &amp; Query</h4>
+                    </div>
+                    <div class="stack__body">
+                        <ul class="stack__core">
+                            <li>Python</li><li>SQL</li><li>Advanced&nbsp;SQL</li><li>PostgreSQL</li>
+                        </ul>
+                        <ul class="chips chips--sm">
+                            <li>T-SQL</li><li>PL/SQL</li><li>Stored&nbsp;Procedures</li><li>Query&nbsp;Optimization</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="stack__col">
-                    <h4>Embedded &amp; OS</h4>
-                    <ul class="stack__list">
-                        <li>Microcontrollers</li><li>RTOS&nbsp;Concepts</li><li>Device&nbsp;Drivers</li><li>Embedded&nbsp;Linux</li><li>Board&nbsp;Bring-Up</li><li>Memory&nbsp;Management</li><li>Multithreading</li>
-                    </ul>
+                <div class="stack__group stack__col">
+                    <div class="stack__rail">
+                        <span class="stack__index">S/02</span>
+                        <h4 class="stack__label">Data Engineering</h4>
+                    </div>
+                    <div class="stack__body">
+                        <ul class="stack__core">
+                            <li>PySpark</li><li>Apache&nbsp;Spark</li><li>Databricks</li><li>ETL&nbsp;/&nbsp;ELT</li>
+                        </ul>
+                        <ul class="chips chips--sm">
+                            <li>Pandas</li><li>NumPy</li><li>Data&nbsp;Modeling</li><li>Data&nbsp;Pipelines</li><li>Data&nbsp;Quality</li><li>Airflow</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="stack__col">
-                    <h4>Protocols</h4>
-                    <ul class="stack__list">
-                        <li>UART</li><li>SPI</li><li>I2C</li><li>CAN</li><li>TCP/IP</li><li>REST&nbsp;APIs</li>
-                    </ul>
+                <div class="stack__group stack__col">
+                    <div class="stack__rail">
+                        <span class="stack__index">S/03</span>
+                        <h4 class="stack__label">Analytics &amp; BI</h4>
+                    </div>
+                    <div class="stack__body">
+                        <ul class="stack__core">
+                            <li>Power&nbsp;BI</li><li>Tableau</li><li>Statistical&nbsp;Analysis</li><li>Predictive&nbsp;Modeling</li>
+                        </ul>
+                        <ul class="chips chips--sm">
+                            <li>DAX</li><li>KPI&nbsp;Reporting</li><li>Dashboards</li><li>Scikit-learn</li><li>A/B&nbsp;Testing</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="stack__col">
-                    <h4>Debug &amp; Test</h4>
-                    <ul class="stack__list">
-                        <li>GDB</li><li>Linux&nbsp;Debugging</li><li>Unit&nbsp;Testing</li><li>Log&nbsp;Analysis</li><li>Root&nbsp;Cause&nbsp;Analysis</li><li>Performance&nbsp;Profiling</li>
-                    </ul>
-                </div>
-                <div class="stack__col">
-                    <h4>Signal Processing</h4>
-                    <ul class="stack__list">
-                        <li>DSP</li><li>FFT</li><li>Filters</li><li>Sensor&nbsp;Signal&nbsp;Processing</li><li>MOSFET&nbsp;&amp;&nbsp;Amplifier&nbsp;Analysis</li>
-                    </ul>
-                </div>
-                <div class="stack__col">
-                    <h4>Tools &amp; Cloud</h4>
-                    <ul class="stack__list">
-                        <li>Git</li><li>Docker</li><li>CI/CD</li><li>AWS</li><li>Jupyter</li><li>NumPy</li><li>SciPy</li><li>Pandas</li><li>Matplotlib</li>
-                    </ul>
+                <div class="stack__group stack__col">
+                    <div class="stack__rail">
+                        <span class="stack__index">S/04</span>
+                        <h4 class="stack__label">Cloud &amp; Tools</h4>
+                    </div>
+                    <div class="stack__body">
+                        <ul class="stack__core">
+                            <li>AWS</li><li>Snowflake</li><li>Git</li><li>Jupyter</li>
+                        </ul>
+                        <ul class="chips chips--sm">
+                            <li>S3</li><li>Redshift</li><li>Excel</li><li>Agile&nbsp;/&nbsp;Scrum</li><li>Jira</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

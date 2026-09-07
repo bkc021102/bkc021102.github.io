@@ -607,128 +607,77 @@ main { position: relative; z-index: 1; }
 
 .about {
     display: grid;
-    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.25fr);
-    gap: clamp(40px, 6vw, 96px);
+    grid-template-columns: 80px minmax(0, 1fr);
+    gap: clamp(24px, 4vw, 56px);
     align-items: start;
 }
-
-.about__portrait {
-    margin: 0;
+.about__rail {
     position: sticky;
     top: 110px;
     align-self: start;
 }
-.about__frame {
-    position: relative;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid var(--border-strong);
-    background: linear-gradient(180deg, #1a1a1a, #0f0f0f);
-    aspect-ratio: 4 / 5;
-    box-shadow:
-        0 40px 80px -30px rgba(0, 0, 0, 0.7),
-        0 0 0 1px rgba(212, 255, 58, 0.04) inset;
-}
-.about__frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 22%;
+.about__rail .section__num {
     display: block;
-    filter: contrast(1.03) saturate(0.95);
-    transition: transform 1.2s var(--ease), filter .6s var(--ease);
-}
-.about__frame::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-        radial-gradient(120% 80% at 20% 0%, rgba(212,255,58,0.08), transparent 55%),
-        linear-gradient(180deg, transparent 55%, rgba(10,11,13,0.5) 100%);
-    pointer-events: none;
-    z-index: 1;
-}
-.about__frame::after {
-    content: "";
-    position: absolute;
-    inset: 10px;
-    border: 1px solid rgba(237, 234, 226, 0.1);
-    border-radius: 4px;
-    pointer-events: none;
-    z-index: 2;
-}
-.about__portrait:hover .about__frame img { transform: scale(1.02); }
-
-.about__portrait figcaption {
-    margin-top: 16px;
-    display: flex;
-    gap: 14px;
-    align-items: baseline;
-    font-family: var(--f-mono);
-    font-size: 10.5px;
-    letter-spacing: 0.08em;
-    color: var(--fg-dim);
-}
-.about__portrait figcaption .k {
-    color: var(--accent);
-    text-transform: uppercase;
-}
-.about__portrait figcaption .v {
-    color: var(--fg-muted);
-    text-transform: uppercase;
+    padding-top: 14px;
+    white-space: nowrap;
 }
 
-.about__body { padding-top: 6px; }
-.about__body .section__num {
-    display: block;
-    margin-bottom: 20px;
+/* Title spans the full measure; prose and the meta ledger split it below,
+   so the reading measure stays ~66ch without leaving the column half empty. */
+.about__body {
+    display: grid;
+    grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.82fr);
+    column-gap: clamp(40px, 6vw, 88px);
+    row-gap: clamp(32px, 4vw, 48px);
+    align-items: start;
 }
 .about__title {
+    grid-column: 1 / -1;
     font-family: var(--f-serif);
     font-weight: 400;
-    font-size: clamp(44px, 6.5vw, 90px);
-    line-height: 0.98;
+    font-size: clamp(44px, 6.6vw, 92px);
+    line-height: 0.96;
     letter-spacing: -0.025em;
-    margin: 0 0 32px;
+    margin: 0;
     color: var(--fg);
+    max-width: 18ch;
 }
 .about__title em {
     font-style: italic;
     color: var(--accent);
 }
+
+.about__prose { max-width: 66ch; }
 .about__lede {
-    font-size: 18px;
-    line-height: 1.55;
+    font-size: 18.5px;
+    line-height: 1.58;
     color: var(--fg);
     margin: 0 0 22px;
-    max-width: 60ch;
 }
 .about__para {
     font-size: 15.5px;
-    line-height: 1.68;
+    line-height: 1.7;
     color: var(--fg-muted);
     margin: 0 0 18px;
-    max-width: 64ch;
 }
-.about__para:last-of-type { margin-bottom: 40px; }
+.about__para:last-child { margin-bottom: 0; }
 
+/* Meta ledger — a spec sheet, not a footnote. */
 .about__facts {
     margin: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 0;
-    border-top: 1px solid var(--border);
+    border-top: 1px solid var(--border-strong);
 }
 .about__facts > div {
-    padding: 16px 0;
+    padding: 15px 0;
     border-bottom: 1px solid var(--border);
     display: grid;
-    grid-template-columns: 90px 1fr;
-    gap: 16px;
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 18px;
     align-items: baseline;
-    padding-right: 20px;
 }
-.about__facts > div:nth-child(even) { padding-left: 20px; padding-right: 0; border-left: 1px solid var(--border); }
 .about__facts dt {
     font-family: var(--f-mono);
     font-size: 10px;
@@ -736,12 +685,15 @@ main { position: relative; z-index: 1; }
     text-transform: uppercase;
     color: var(--fg-dim);
     font-weight: 500;
+    transition: color .25s var(--ease);
 }
+.about__facts > div:hover dt { color: var(--accent); }
 .about__facts dd {
     margin: 0;
-    font-size: 14px;
+    font-size: 14.5px;
     color: var(--fg);
-    line-height: 1.35;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
 }
 .about__facts dd a {
     color: var(--fg);
@@ -804,6 +756,37 @@ main { position: relative; z-index: 1; }
     text-transform: uppercase;
     border-radius: 100px;
     background: rgba(212, 255, 58, 0.06);
+}
+
+.role__brand {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin: 0 0 4px;
+}
+.role__brand .role__company { margin-bottom: 0; }
+
+/* Brand marks are shipped pre-inked in --fg (see assets/images/logos/*-light.svg),
+   so they sit directly on the page with no plate behind them — a light plate would
+   swallow them. Never add filter: invert() here; the assets are already inverted. */
+.role__logo {
+    box-sizing: content-box;
+    flex: 0 0 auto;
+    height: clamp(20px, 2.2vw, 28px);
+    width: auto;
+    max-width: 160px;
+    object-fit: contain;
+    padding: 5px 0 0;
+    opacity: 0.86;
+    transition: opacity .3s var(--ease);
+}
+.role:hover .role__logo { opacity: 1; }
+/* Smaller variant for the credentials column. */
+.role__logo--sm {
+    height: clamp(14px, 1.6vw, 18px);
+    max-width: 120px;
+    padding: 0;
 }
 
 .role__company {
@@ -947,9 +930,45 @@ main { position: relative; z-index: 1; }
     margin: 0 0 22px;
 }
 
-.project__metrics {
+/* Column 2 stack. The hydrated card wraps meta/title/desc/chips so the
+   card stays a single grid row and column 3 never has to span rows. The
+   gap mirrors the old .project row gap so the rhythm is unchanged. */
+.project__main {
+    grid-column: 2;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(24px, 4vw, 56px);
+}
+
+/* Column 3 stack: artwork on top, metrics beneath. */
+.project__aside {
     grid-column: 3;
-    grid-row: 2 / span 3;
+    min-width: 0;
+    align-self: start;
+}
+
+.project__thumb {
+    margin: 0 0 16px;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--bg-raised);
+    transition: border-color .4s var(--ease);
+}
+.project__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.94) contrast(1.02);
+    transition: transform .6s var(--ease), filter .6s var(--ease);
+}
+.project:hover .project__thumb { border-color: var(--border-strong); }
+.project:hover .project__thumb img { transform: scale(1.03); filter: saturate(1) contrast(1.02); }
+
+.project__metrics {
     display: flex;
     flex-direction: column;
     gap: 14px;
@@ -998,70 +1017,83 @@ main { position: relative; z-index: 1; }
 /* ==========================================================================
    STACK
    ==========================================================================*/
+/* Row-per-group with a left rail — same reading rhythm as .role and .project.
+   Uneven group sizes just make a row taller instead of stretching a grid cell. */
 .stack {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
-    border-top: 1px solid var(--border);
-    border-left: 1px solid var(--border);
-}
-.stack__col {
-    padding: clamp(24px, 3vw, 36px);
-    border-right: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    background: rgba(237,234,226,0.008);
-    transition: background .3s var(--ease);
-}
-.stack__col:hover { background: rgba(212,255,58,0.015); }
-
-.stack__col h4 {
-    font-family: var(--f-mono);
-    font-size: 11px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--accent);
-    font-weight: 500;
-    margin: 0 0 22px;
-    padding-bottom: 12px;
-    border-bottom: 1px dashed var(--border);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.stack__col h4::before {
-    content: "◆";
-    font-size: 8px;
-    color: var(--accent);
-}
-.stack__list {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+}
+.stack__group {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: clamp(28px, 5vw, 72px);
+    align-items: start;
+    padding: clamp(28px, 3.6vw, 46px) 0;
+    border-bottom: 1px solid var(--border);
+    transition: background .3s var(--ease);
+}
+.stack__group:hover { background: linear-gradient(90deg, transparent, rgba(212,255,58,0.02), transparent); }
+
+.stack__rail {
+    position: sticky;
+    top: 110px;
+    align-self: start;
+}
+.stack__index {
+    display: block;
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--fg-dim);
+    margin-bottom: 12px;
+    transition: color .3s var(--ease);
+}
+.stack__group:hover .stack__index { color: var(--accent); }
+.stack__label {
+    font-family: var(--f-mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--fg);
+    line-height: 1.45;
+    margin: 0;
+}
+.stack__note {
+    margin: 10px 0 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--fg-dim);
+    max-width: 28ch;
+}
+
+/* Core skills carry the group; supporting skills fall back to the chip scale. */
+.stack__core {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px 0;
+    margin: 0;
     font-family: var(--f-sans);
-    font-size: 14.5px;
+    font-size: clamp(16.5px, 1.5vw, 19px);
+    line-height: 1.4;
+    letter-spacing: -0.005em;
     color: var(--fg);
 }
-.stack__list li {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    padding: 2px 0;
-}
-.stack__list li::before {
-    content: "";
-    display: inline-block;
-    width: 4px; height: 4px;
-    background: var(--fg-dim);
-    border-radius: 50%;
-    margin-right: 10px;
-    transform: translateY(-2px);
-}
-.stack__list li span {
+/* Separator rides inside the item box so a wrapped line never starts with "/". */
+.stack__core li { display: inline-flex; align-items: baseline; }
+.stack__core li:not(:last-child)::after {
+    content: "/";
     font-family: var(--f-mono);
-    font-size: 10px;
+    font-size: 0.6em;
     color: var(--fg-dim);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+    margin: 0 13px;
+    transform: translateY(-0.1em);
+}
+.stack__core + .chips {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px dashed var(--border);
 }
 
 /* ==========================================================================
@@ -1114,6 +1146,7 @@ main { position: relative; z-index: 1; }
     font-size: 13px;
     color: var(--fg-muted);
 }
+.edu__logo { margin: 0 0 12px; }
 .edu__note { color: var(--accent) !important; font-family: var(--f-mono); font-size: 11px !important; margin-top: 6px !important; letter-spacing: 0.04em; }
 
 /* Certs list */
@@ -1124,7 +1157,7 @@ main { position: relative; z-index: 1; }
 }
 .cert-list li {
     display: grid;
-    grid-template-columns: 72px 1fr;
+    grid-template-columns: 84px 1fr;
     gap: 14px;
     padding: 12px 0;
     border-bottom: 1px dashed var(--border);
@@ -1138,6 +1171,13 @@ main { position: relative; z-index: 1; }
     text-transform: uppercase;
     color: var(--accent);
     font-weight: 500;
+}
+.cert__issuer .role__logo--sm {
+    display: inline-block;
+    vertical-align: bottom;
+    max-width: 64px;
+    height: clamp(12px, 1.4vw, 16px);
+    padding: 4px 6px;
 }
 .cert__name {
     color: var(--fg);
@@ -1339,10 +1379,11 @@ main { position: relative; z-index: 1; }
     .hero__grid { grid-template-columns: 1fr; }
     .console { max-width: 560px; }
 
-    .about { grid-template-columns: 1fr; gap: 40px; }
-    .about__portrait { position: static; max-width: 440px; }
-    .about__facts { grid-template-columns: 1fr; }
-    .about__facts > div { border-left: 0 !important; padding-left: 0 !important; padding-right: 0 !important; }
+    .about { grid-template-columns: 60px minmax(0, 1fr); gap: 24px; }
+    .about__rail .section__num { padding-top: 10px; }
+    .about__body { grid-template-columns: minmax(0, 1fr); row-gap: 36px; }
+    .about__title { max-width: none; }
+    .about__prose { max-width: 68ch; }
 
     .impact__grid { grid-template-columns: repeat(2, 1fr); }
     .impact__cell { padding: 24px 20px; border-left: 1px solid var(--border); border-top: 1px solid var(--border); }
@@ -1350,16 +1391,21 @@ main { position: relative; z-index: 1; }
     .impact__cell:nth-child(-n+2) { border-top: 0; padding-top: 0; }
 
     .project { grid-template-columns: 60px 1fr; }
+    /* Aside drops under the text column; metrics spread out as a row. */
+    .project__main,
+    .project__aside,
     .project__metrics {
         grid-column: 2;
-        grid-row: auto;
+    }
+    .project__thumb { max-width: 460px; }
+    .project__metrics {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 20px 32px;
     }
     .project__metrics div { flex: 1 1 130px; }
 
-    .stack { grid-template-columns: repeat(2, 1fr); }
+    .stack__group { grid-template-columns: 170px minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); }
     .creds { grid-template-columns: 1fr; }
     .contact { grid-template-columns: repeat(2, 1fr); }
     .footer__inner { grid-template-columns: 1fr 1fr; }
@@ -1395,10 +1441,20 @@ main { position: relative; z-index: 1; }
 
     .project { grid-template-columns: 1fr; gap: 8px; }
     .project__index { padding-top: 0; }
+    .project__main, .project__aside,
     .project__meta, .project__title, .project__desc, .project .chips, .project__metrics { grid-column: 1; }
+    .project__main { gap: 8px; }
+    .project__aside { margin-top: 20px; }
+    .project__thumb { max-width: none; }
     .project__metrics { flex-direction: column; gap: 14px; }
 
-    .stack { grid-template-columns: 1fr; }
+    .about { grid-template-columns: 1fr; gap: 14px; }
+    .about__rail { position: static; }
+    .about__rail .section__num { padding-top: 0; }
+
+    .stack__group { grid-template-columns: 1fr; gap: 18px; padding: 30px 0; }
+    .stack__rail { position: static; }
+    .stack__note { max-width: none; }
     .contact { grid-template-columns: 1fr; }
     .contact__card { border-right: 0; }
 
